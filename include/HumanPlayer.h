@@ -3,6 +3,8 @@
 #include <interface/IPlayer.h>
 
 class HumanPlayer : public IPlayer {
+    char character;
+
 public:
     HumanPlayer(char character);
 
