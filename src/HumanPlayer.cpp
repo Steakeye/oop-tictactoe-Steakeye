@@ -3,7 +3,7 @@
 #include "BoardPosition.h"
 #include "utility.h"
 
-HumanPlayer::HumanPlayer(char character) character(character) {}
+HumanPlayer::HumanPlayer(char character): character(character) {}
 
 char HumanPlayer::Symbol() const { return character; }
 

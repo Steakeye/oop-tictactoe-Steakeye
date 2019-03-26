@@ -7,9 +7,9 @@
 struct Board {
     Board();
 
-    &std::vector<BoardPosition> FreePositions() const;
-    OccupyPosition(const IPlayer &player, const BoardPosition &position);
-    &std::vector<char> CurrentState() const;
+    const std::vector<BoardPosition>& FreePositions() const;
+    void OccupyPosition(const IPlayer &player, const BoardPosition &position);
+    const std::vector<char>& CurrentState() const;
 
 private:
     std::vector<char> state;

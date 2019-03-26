@@ -9,5 +9,5 @@ public:
     HumanPlayer(char character);
 
     char Symbol() const override;
-    BoardPosition TakeTurn(const &std::vector<BoardPosition> freePositions) override;
+    BoardPosition TakeTurn(const std::vector<BoardPosition>& freePositions) override;
 };
