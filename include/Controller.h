@@ -6,7 +6,7 @@
 
 class Controller {
 public:
-    Controller(IRenderer renderer, Board board, IPlayer playerOne, IPlayer playerTwo);
+    Controller(IRenderer& renderer, Board board, IPlayer& playerOne, IPlayer& playerTwo);
 
     void PlayGame();
 

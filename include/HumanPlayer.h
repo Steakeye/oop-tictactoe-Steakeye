@@ -1,6 +1,9 @@
 #pragma once
 
-#include <interface/IPlayer.h>
+#include <vector>
+#include "interface/IPlayer.h"
+#include "BoardPosition.h"
+#include "utility.h"
 
 class HumanPlayer : public IPlayer {
 public:

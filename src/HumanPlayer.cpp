@@ -1,7 +1,4 @@
-#include <vector>
 #include "HumanPlayer.h"
-#include "BoardPosition.h"
-#include "utility.h"
 
 HumanPlayer::HumanPlayer(char character): character(character) {}
 
