@@ -58,3 +58,11 @@ template <typename T>
 inline BoardPosition NumberToBoardPosition(const T& num) {
     return static_cast<BoardPosition>(num);
 }
+
+inline std::vector<BoardPosition>::iterator GetFreePositionIt(const std::vector<BoardPosition> &freePositions,
+                                                              const BoardPosition &positionToPlay) {
+    std::vector<BoardPosition&>::iterator endIterator = freePositions.end();
+    std::vector<BoardPosition>::iterator positionIndex = std::find(freePositions.begin(), endIterator, positionToPlay);
+
+    return positionIndex;
+}

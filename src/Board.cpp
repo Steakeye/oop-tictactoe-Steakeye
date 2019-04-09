@@ -21,7 +21,7 @@ const std::vector<char>& Board::CurrentState() const {
 
 void Board::OccupyPosition(const IPlayer& player, const BoardPosition& position) {
     std::vector<BoardPosition>::iterator endIterator = freePositions.end();
-    std::vector<BoardPosition>::iterator positionIndex = std::find(freePositions.begin(), endIterator, position);
+    std::vector<BoardPosition>::iterator positionIndex = GetFreePositionIt(freePositions, position);
     bool positionIsFree = positionIndex != endIterator;
 
     if (positionIsFree) {
