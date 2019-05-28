@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <limits>
+#include <algorithm>
+#include <vector>
+
 
 // This function will read a number from the console (the command prompt) for you.
 // You can optionally tell it the minimum and maximum values you want to consider acceptable.
@@ -59,10 +62,10 @@ inline BoardPosition NumberToBoardPosition(const T& num) {
     return static_cast<BoardPosition>(num);
 }
 
-inline std::vector<BoardPosition>::iterator GetFreePositionIt(const std::vector<BoardPosition> &freePositions,
-                                                              const BoardPosition &positionToPlay) {
-    std::vector<BoardPosition&>::iterator endIterator = freePositions.end();
-    std::vector<BoardPosition>::iterator positionIndex = std::find(freePositions.begin(), endIterator, positionToPlay);
+inline std::vector<BoardPosition>::const_iterator GetFreePositionIt(const std::vector<BoardPosition>& freePositions,
+                                                              const BoardPosition& positionToPlay) {
+    std::vector<BoardPosition>::const_iterator endIterator = freePositions.end();
+    std::vector<BoardPosition>::const_iterator positionIndex = std::find(freePositions.begin(), endIterator, positionToPlay);
 
     return positionIndex;
 }
