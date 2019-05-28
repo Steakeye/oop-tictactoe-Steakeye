@@ -1,5 +1,6 @@
 #pragma once
 
+#include <vector>
 #include "BoardPosition.h"
 
 struct IPlayer {

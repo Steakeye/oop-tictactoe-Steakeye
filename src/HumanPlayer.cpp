@@ -14,7 +14,7 @@ BoardPosition HumanPlayer::TakeTurn(const std::vector<BoardPosition>& freePositi
     BoardPosition userPosition = NumberToBoardPosition(userInput);
 
     std::vector<BoardPosition&>::iterator endIterator = freePositions.end();
-    std::vector<BoardPosition>::iterator positionIndex = GetFreePositionIt(freePositions, userPosition);
+    std::vector<BoardPosition>::const_iterator positionIndex = GetFreePositionIt(freePositions, userPosition);
 
     bool positionIsFree = positionIndex != endIterator;
 
