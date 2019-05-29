@@ -3,6 +3,7 @@
 #include <interface/IPlayer.h>
 #include <interface/IRenderer.h>
 #include <Board.h>
+#include <utility.h>
 
 class Controller {
 public:
