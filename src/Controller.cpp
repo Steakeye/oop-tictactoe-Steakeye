@@ -6,4 +6,6 @@ void Controller::PlayGame() {
     PrintMessage("Welcome to Noughts and Crosses!\n");
     // TODO!
     renderer.RenderBoard(board.CurrentState());
+
+    playerOne.TakeTurn(board.FreePositions());
 }
